@@ -1,38 +1,68 @@
 .App {
+  max-width: 1280px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.globalnavigation {
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 15px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* ----- Kort formattering ----- */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.kortraekke {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  }
+
+  .kort {
+    position: relative;
+    width: 240px;
+    margin: 10px;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    
+.adminkort { cursor: pointer;
+}
+.kort img { max-width: 100%;
+}
+
+.kort .tekst {
+  text-align: center; padding: 0 10px 50px;
+  }
+
+  /* ---- Teskt typpe og at den skal være 65 høj ---- */
+  .kort .tekst p:nth-of-type(1) { 
+    min-height: 65px;
+  }
+
+  .kort h3 {
+  text-align: center; 
+  margin-bottom: 5px;
+  }
+
+  .laesmereknap { position: absolute; 
+  background: #805719; 
+  border-radius: 5px; 
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  padding: 10px;
+  width: 42%;
+  bottom: 10px;
+  left: 10px;
+  border: none;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+  .bestilknap {
+  position: absolute; 
+  background: #40505f; 
+  border-radius: 5px;
+  color: white; 
+  padding: 10px; width: 42%; 
+  bottom: 10px; right: 10px; 
+  border: none;
 }
